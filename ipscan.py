@@ -30,3 +30,4 @@ if __name__ == "__main__":
     print("🌐 IP Adresi Sorgulayıcı\n" + "-"*40)
     ip = input("🔎 IP adresini gir: ").strip()
     get_ip_info(ip)
+    input("\nKapatmak için Enter tuşuna bas...")
