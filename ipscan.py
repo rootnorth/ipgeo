@@ -1,7 +1,7 @@
 import requests
 
 def get_ip_info(ip=""):
-    url = f"https://ip-api.com/json/{ip}?fields=66846719"
+    url = f"http://ip-api.com/json/{ip}?fields=66846719"
     try:
         response = requests.get(url, timeout=5)
         data = response.json()
