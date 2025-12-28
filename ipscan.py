@@ -1,7 +1,7 @@
 import requests
 
-def get_ip_info(ip):
-    url = f"http://ip-api.com/json/{ip}?fields=66846719"
+def get_ip_info(ip=""):
+    url = f"https://ip-api.com/json/{ip}?fields=66846719"
     try:
         response = requests.get(url, timeout=5)
         data = response.json()
@@ -28,6 +28,6 @@ def get_ip_info(ip):
 
 if __name__ == "__main__":
     print("🌐 IP Adresi Sorgulayıcı\n" + "-"*40)
-    ip = input("🔎 IP adresini gir: ").strip()
+    ip = input("🔎 IP adresini gir (boş bırak = kendi IP): ").strip()
     get_ip_info(ip)
     input("\nKapatmak için Enter tuşuna bas...")
